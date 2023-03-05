@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  /* font-size: 18px; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.playerDiv {
+  border-radius: 20px;
+  width: 500px;
+  height: 600px;
+  max-width: 600px;
+  max-height: 800px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background: linear-gradient(to right, #c21500, #ffc500);
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  position: relative;
+  font-size: 22px;
+}
+.playerDisk {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 50px 0 0 0;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  transition: .3s;
+}
+.player {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.musicDetail {
+  font-size: 18px;
+  text-align: center;
+}
+.musicName {
+  font-size: 24px;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.musician {
+  font-size: 32px;
+}
+.musician {
+  margin-top: 10px;
+  font-size: 19px;
+}
+.musicRange {
+  width:400px;
+}
+.musicRange input {
+  width: 100%;
+}
+
+.musicButtons {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 42px;
+  color: #fff;
+}
+.playDiv {
+  padding-left: 1px;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #000000;
+}
+.sound{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 200px;
+  font-size: 24px;
+  margin:  20px 0;
+}
+.sound input{
+  width: 300px;
+}
+.sound i{
+  cursor: pointer;
+}
+.prevButton {
+  cursor: pointer;
+}
+.prevButton:active {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.nextButton {
+  cursor: pointer;
+}
+.sound {
+  width: 100%;
+}
+.pauseButton {
+  display: none;
+}
+
+/* Range */
+
+.musicRange input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Removes default focus */
+.musicRange input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+.musicRange input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #00000083;
+  border-radius: 0.5rem;
+  height: 8px;
+}
+
+/* slider thumb */
+.musicRange input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.musicRange input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #ffffff;
+  outline-offset: 0.125rem;
+}
+
+.time {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list{
+  font-size: 40px;
+  position: absolute;
+  margin: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.demo{
+  background-color: #070202;
+  /* padding: 10px; */
+  position: absolute;
+  left: 100%;
+  width: max-content;
+  height: 90%;
+  margin-top: 50px;
+  border-radius: 0 20px 20px 0;
+  background-color: #ffc500;
+  display:flex;
+  justify-content:center;
+  padding: 10px 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.demo.active{
+visibility: visible;
+opacity: 1;
+}
+#musicList{
+  font-size: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 2;
+  color: #070202;
+}
+#musicList li{
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+background-color: #6145454f;
+transition: .3s
+}
+#musicList li:hover{
+  color: #fff;
+  background-color: #c2130063;
+}

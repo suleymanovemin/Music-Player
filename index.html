@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="body">
+    <div class="playerDiv">
+        <div class="player">
+            <div class="playerDisk">
+            </div>
+            <div class="musicDetail">
+                <div class="musicName">Lorem ipsum dolor sit amet.</div>
+                <div class="musician">Lorem, ipsum dolor.</div>
+            </div>
+            <div class="musicRange">
+                <input type="range" value="0">
+                <div class="time">
+                    <div class="presentTime">
+                        00.00
+                    </div>
+                    <div class="endTime">
+                        00.00
+                    </div>
+                </div>
+            </div>
+            <div class="musicButtons">
+                <div class="prevButton" onclick="prevTrack()">
+                    <i class="fa-solid fa-backward-step"></i>
+                </div>
+                <div class="playDiv">
+                    <div class="pauseButton" onclick="pauseTrack()"><i class="fa-solid fa-pause"></i></div>
+                    <div class="playButton" onclick="playTrack()"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="nextButton" onclick="nextTrack()">
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+            </div>
+            <div class="sound">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <input type="range" value="100" id="soundRange" max="100">
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+
+        </div>
+        <div class="list"><i class="fa-solid fa-bars"></i></div>
+        <aside class="demo">
+            <ul id="musicList">
+
+            </ul>
+        </aside>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
